@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ua.edu.sumdu.j2se.savostian.tasks</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1336.0">ua.edu.sumdu.j2se.savostian.tasks.Main</node>
+    <node x="1104.0" y="0.0">ua.edu.sumdu.j2se.savostian.tasks.controller.MainController</node>
+    <node x="609.0" y="1068.0">ua.edu.sumdu.j2se.savostian.tasks.services.Formatter</node>
+    <node x="386.0" y="150.0">ua.edu.sumdu.j2se.savostian.tasks.view.EditTaskView</node>
+    <node x="0.0" y="1213.0">ua.edu.sumdu.j2se.savostian.tasks.services.AdaptorToTasklist</node>
+    <node x="1160.0" y="1213.0">ua.edu.sumdu.j2se.savostian.tasks.services.TaskListFactory</node>
+    <node x="24.5" y="773.0">ua.edu.sumdu.j2se.savostian.tasks.services.ListTypes</node>
+    <node x="625.0" y="1213.0">ua.edu.sumdu.j2se.savostian.tasks.controller.SaveController</node>
+    <node x="285.5" y="366.0">ua.edu.sumdu.j2se.savostian.tasks.controller.EditTaskController</node>
+    <node x="2.5" y="650.0">ua.edu.sumdu.j2se.savostian.tasks.controller.TodayTaskController</node>
+    <node x="848.0" y="0.0">ua.edu.sumdu.j2se.savostian.tasks.services.ProgramStatus</node>
+    <node x="626.0" y="773.0">ua.edu.sumdu.j2se.savostian.tasks.services.InputCheck</node>
+    <node x="206.0" y="773.0">ua.edu.sumdu.j2se.savostian.tasks.model.NotifiedThread</node>
+    <node x="964.0" y="773.0">ua.edu.sumdu.j2se.savostian.tasks.controller.ThreadController</node>
+    <node x="0.0" y="194.0">ua.edu.sumdu.j2se.savostian.tasks.view.ShowCalendarView</node>
+    <node x="0.0" y="877.0">ua.edu.sumdu.j2se.savostian.tasks.services.ListTypes.types</node>
+    <node x="630.0" y="194.0">ua.edu.sumdu.j2se.savostian.tasks.view.ShowAllTasksView</node>
+    <node x="2.5" y="388.0">ua.edu.sumdu.j2se.savostian.tasks.controller.ShowCalendarController</node>
+    <node x="366.5" y="650.0">ua.edu.sumdu.j2se.savostian.tasks.controller.AddTaskController</node>
+    <node x="411.5" y="0.0">ua.edu.sumdu.j2se.savostian.tasks.view.TaskView</node>
+    <node x="0.0" y="1068.0">ua.edu.sumdu.j2se.savostian.tasks.model.Tasks</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.view.ShowCalendarView" target="ua.edu.sumdu.j2se.savostian.tasks.view.TaskView" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="134.0" y="125.0" />
+      <point x="498.0" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.controller.ShowCalendarController" target="ua.edu.sumdu.j2se.savostian.tasks.view.ShowCalendarView" relationship="GENERALIZATION">
+      <point x="0.0" y="-95.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.services.ListTypes.types" target="ua.edu.sumdu.j2se.savostian.tasks.services.ListTypes" relationship="INNER_CLASS">
+      <point x="0.0" y="-73.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.controller.TodayTaskController" target="ua.edu.sumdu.j2se.savostian.tasks.controller.ShowCalendarController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="0.0" y="95.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.controller.EditTaskController" target="ua.edu.sumdu.j2se.savostian.tasks.view.EditTaskView" relationship="GENERALIZATION">
+      <point x="0.0" y="-117.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.view.EditTaskView" target="ua.edu.sumdu.j2se.savostian.tasks.view.TaskView" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.view.ShowAllTasksView" target="ua.edu.sumdu.j2se.savostian.tasks.view.TaskView" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="716.5" y="125.0" />
+      <point x="498.0" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="ua.edu.sumdu.j2se.savostian.tasks.controller.AddTaskController" target="ua.edu.sumdu.j2se.savostian.tasks.controller.EditTaskController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="0.0" y="117.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.39400278940027894" showDependencies="false" x="706.5" y="707.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
