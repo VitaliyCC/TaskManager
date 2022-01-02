@@ -20,7 +20,11 @@ public class TaskView implements ConsoleView {
         }
 
         printTask.append('|');
-        printTask.append(Formatter.createFormatDate(time));
+        if (task.getStartTime().equals(LocalDateTime.MIN)) {
+            printTask.append(Formatter.createFormatTitle("Empty", 38));
+        } else {
+            printTask.append(Formatter.createFormatDate(time));
+        }
 
         System.out.println(printTask);
 
@@ -46,12 +50,25 @@ public class TaskView implements ConsoleView {
         } else {
             printTask.append(Formatter.createFormatTitle("non-repeated", 12));
         }
+
         printTask.append('|');
         printTask.append(Formatter.createFormatTitle(String.valueOf(task.getRepeatInterval() / 60000), 5));
         printTask.append('|');
-        printTask.append(Formatter.createFormatDate(task.getStartTime()));
+
+        if (task.getStartTime().equals(LocalDateTime.MIN)) {
+            printTask.append(Formatter.createFormatTitle("Empty", 38));
+        } else {
+            printTask.append(Formatter.createFormatDate(task.getStartTime()));
+        }
+
         printTask.append('|');
-        printTask.append(Formatter.createFormatDate(task.getEndTime()));
+
+        if (task.getEndTime().equals(LocalDateTime.MIN)) {
+            printTask.append(Formatter.createFormatTitle("Empty", 38));
+        } else {
+            printTask.append(Formatter.createFormatDate(task.getEndTime()));
+        }
+
         printTask.append('|');
 
         System.out.println(printTask);
