@@ -37,7 +37,8 @@ public class MenuView extends TaskView {
         printSomeTitle("2. Activate task");
         printSomeTitle("3. Set time for repeated task");
         printSomeTitle("4. Set time for non-repeated task");
-        printSomeTitle("5. Save and exit to main menu");
+        printSomeTitle("5. Delete task");
+        printSomeTitle("6. Save and exit to main menu");
         printSeparator();
         System.out.print("Your choice - ");
 

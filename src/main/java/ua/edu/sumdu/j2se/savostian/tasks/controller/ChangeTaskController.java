@@ -67,6 +67,10 @@ public class ChangeTaskController extends EditTaskController {
             saveController.process(taskList, this);
 
             return controller.process(taskList);
+        }else if(status.equals(ProgramStatus.DELETE)){
+            removeTempTask();
+
+            return controller.process(taskList);
         } else {
             logger.error("Program status is incorrect! status -"+status +"\n");
             throw new IllegalStateException("Program status is incorrect!");

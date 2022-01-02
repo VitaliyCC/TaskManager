@@ -10,12 +10,13 @@ public class TaskView implements ConsoleView {
         StringBuilder printTask = new StringBuilder();
 
         printTask.append('|');
-        printTask.append(Formatter.createFormatTitle(task.getTitle(),30));
+        printTask.append(Formatter.createFormatTitle(task.getTitle(), 30));
         printTask.append('|');
+
         if (task.isActive()) {
-            printTask.append(Formatter.createFormatTitle("active",10));
+            printTask.append(Formatter.createFormatTitle("active", 10));
         } else {
-            printTask.append(Formatter.createFormatTitle("non-active",10));
+            printTask.append(Formatter.createFormatTitle("non-active", 10));
         }
 
         printTask.append('|');
@@ -29,24 +30,24 @@ public class TaskView implements ConsoleView {
         StringBuilder printTask = new StringBuilder();
 
         printTask.append('|');
-        printTask.append(Formatter.createFormatTitle(task.getTitle(),30));
+        printTask.append(Formatter.createFormatTitle(task.getTitle(), 30));
         printTask.append('|');
 
         if (task.isActive()) {
-            printTask.append(Formatter.createFormatTitle("active",10));
+            printTask.append(Formatter.createFormatTitle("active", 10));
         } else {
-            printTask.append(Formatter.createFormatTitle("non-active",10));
+            printTask.append(Formatter.createFormatTitle("non-active", 10));
         }
 
         printTask.append('|');
 
         if (task.isRepeated()) {
-            printTask.append(Formatter.createFormatTitle("repeated",12));
+            printTask.append(Formatter.createFormatTitle("repeated", 12));
         } else {
-            printTask.append(Formatter.createFormatTitle("non-repeated",12));
+            printTask.append(Formatter.createFormatTitle("non-repeated", 12));
         }
         printTask.append('|');
-        printTask.append(Formatter.createFormatTitle(String.valueOf(task.getRepeatInterval()/60000),5));
+        printTask.append(Formatter.createFormatTitle(String.valueOf(task.getRepeatInterval() / 60000), 5));
         printTask.append('|');
         printTask.append(Formatter.createFormatDate(task.getStartTime()));
         printTask.append('|');

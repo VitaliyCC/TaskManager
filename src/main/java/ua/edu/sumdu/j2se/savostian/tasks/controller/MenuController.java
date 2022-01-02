@@ -67,7 +67,7 @@ public class MenuController extends Controller {
 
         } else if (programStatus.equals(ProgramStatus.CHANGE)) {
             menuView.printChangeMenu();
-            options = InputController.nextIntInRange(1, 5);
+            options = InputController.nextIntInRange(1, 6);
 
             logger.debug("Selected menu item " +options);
 
@@ -81,6 +81,8 @@ public class MenuController extends Controller {
                 case 4:
                     return ProgramStatus.SETNONREPEATETTIME;
                 case 5:
+                    return ProgramStatus.DELETE;
+                case 6:
                     return ProgramStatus.SAVE;
             }
 

@@ -6,6 +6,7 @@ public class Formatter {
     /**
      * Method for converting LocalDateTime to a formatted string
      * @param dateTime variable to be converted
+     * @throws NullPointerException if dateTime is null
      * @return a variable transformed into a string
      */
     static public StringBuilder createFormatDate(LocalDateTime dateTime) {
@@ -13,7 +14,7 @@ public class Formatter {
         StringBuilder tempRes = new StringBuilder();
 
         if (dateTime == null) {
-            throw new IllegalArgumentException(
+            throw new NullPointerException(
                     "Method's parameter has null value"
             );
         }
@@ -49,7 +50,7 @@ public class Formatter {
      * @throws NullPointerException if title is null
      * @return formatted string
      */
-    static public StringBuilder createFormatTitle(String title, int fieldSize) {
+    static public StringBuilder createFormatTitle(String title, int fieldSize){
         StringBuilder result = new StringBuilder();
 
         if (InputCheck.checkEmpty(title)) {

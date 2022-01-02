@@ -51,6 +51,11 @@ public class Task implements Cloneable, Serializable {
      * @see Task#Task() constructor for tasks
      */
     public Task() {
+        title = "My empty task";
+        isActive = false;
+        isPeriodical = false;
+        setTime(LocalDateTime.MIN);
+
         logger.debug(
                 "Create new task" + this
         );
