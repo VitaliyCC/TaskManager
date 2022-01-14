@@ -71,7 +71,6 @@ public class MainController extends Controller {
             }
 
             if (status.equals(ProgramStatus.ADD)) {
-                status = menuController.process(status);
                 status = addTaskController.process(globalTasks, status, threadController);
 
             } else if (status.equals(ProgramStatus.CHANGE)) {

@@ -210,7 +210,7 @@ public class InputController extends Controller {
             }
 
             if (wasError) {
-                System.out.print("Entered value is not correct!\n Try again -");
+                System.out.print("Entered value is not correct or a past date entered!\n Try again -");
             }
 
         } while (wasError);

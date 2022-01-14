@@ -46,24 +46,6 @@ public class MenuController extends Controller {
                     return ProgramStatus.EXIT;
             }
 
-        } else if (programStatus.equals(ProgramStatus.ADD)) {
-            menuView.printAddMenu();
-            options = InputController.nextIntInRange(1, 5);
-
-            logger.debug("Selected menu item " +options);
-
-            switch (options) {
-                case 1:
-                    return ProgramStatus.SETNAME;
-                case 2:
-                    return ProgramStatus.SETACTIVE;
-                case 3:
-                    return ProgramStatus.SETREPEATETTIME;
-                case 4:
-                    return ProgramStatus.SETNONREPEATETTIME;
-                case 5:
-                    return ProgramStatus.SAVE;
-            }
 
         } else if (programStatus.equals(ProgramStatus.CHANGE)) {
             menuView.printChangeMenu();
