@@ -32,8 +32,7 @@ public class TaskIO {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+           logger.error("Stream interrupt error " , e);
         }
     }
 
@@ -67,8 +66,7 @@ public class TaskIO {
                 tasks.add(task);
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Stream interrupt error " , e);
         }
     }
 
@@ -81,8 +79,7 @@ public class TaskIO {
         try (FileOutputStream outputStream = new FileOutputStream(file)) {
             write(tasks, outputStream);
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Error while loading file " , e);
         }
     }
 
@@ -95,8 +92,7 @@ public class TaskIO {
         try (FileInputStream inputStream = new FileInputStream(file)) {
             read(tasks, inputStream);
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Error while loading file " , e);
         }
     }
 
@@ -110,8 +106,7 @@ public class TaskIO {
         try (BufferedWriter writer = new BufferedWriter(out)) {
             writer.write(gson.toJson(tasks));
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Stream interrupt error " , e);
         }
     }
 
@@ -132,8 +127,7 @@ public class TaskIO {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Stream interrupt error " , e);
         }
     }
 
@@ -146,8 +140,7 @@ public class TaskIO {
         try (FileWriter fileWriter = new FileWriter(file)) {
             write(tasks, fileWriter);
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+            logger.error("Error while loading file " , e);
         }
     }
 
@@ -160,8 +153,7 @@ public class TaskIO {
         try (FileReader fileReader = new FileReader(file)) {
             read(tasks, fileReader);
         } catch (IOException e) {
-            e.printStackTrace();
-            logger.error(e + " " + e.getStackTrace().toString() + "\n");
+           logger.error("Error while loading file " , e);
         }
     }
 }

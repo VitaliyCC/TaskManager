@@ -25,12 +25,9 @@ public class InputController extends Controller {
             line = in.nextLine();
 
             if (InputCheck.checkEmpty(line)) {
-                logger.debug(
-                        "User's input error"
-                );
+                logger.debug("User's input error");
 
                 wasError = true;
-
             }
 
             if (wasError) {
@@ -56,26 +53,21 @@ public class InputController extends Controller {
             tempInt = in.nextLine();
 
             if (InputCheck.checkEmpty(tempInt)) {
-                logger.debug(
-                        "User's input error. Input string is empty!"
-                );
+                logger.debug("User's input error. Input string is empty!");
 
                 wasError = true;
-
             }
 
             try {
                 inValue = Integer.parseInt(tempInt);
             } catch (NumberFormatException e) {
-                logger.debug(e);
+                logger.debug("Error formatting integer",e);
                 wasError = true;
             }
 
-            if (inValue < 0) {
+            if (inValue <= 0) {
                 wasError = true;
-                logger.debug(
-                        "User's input error. Int value is negative!"
-                );
+                logger.debug("User's input error. Int value is negative!");
             }
 
             if (wasError) {
@@ -101,26 +93,21 @@ public class InputController extends Controller {
             tempInt = in.nextLine();
 
             if (InputCheck.checkEmpty(tempInt)) {
-                logger.debug(
-                        "User's input error. Input string is empty!"
-                );
+                logger.debug("User's input error. Input string is empty!");
 
                 wasError = true;
-
             }
 
             try {
                 inValue = Integer.parseInt(tempInt);
             } catch (NumberFormatException e) {
-                logger.debug(e);
+                logger.debug("Error formatting integer",e);
                 wasError = true;
             }
 
             if (inValue < from || inValue > to) {
                 wasError = true;
-                logger.debug(
-                        "User's input error. Int value is negative!"
-                );
+                logger.debug("User's input error. Int value is negative!");
             }
 
             if (wasError) {
@@ -146,9 +133,7 @@ public class InputController extends Controller {
             tempbool = in.nextLine();
 
             if (InputCheck.checkEmpty(tempbool)) {
-                logger.debug(
-                        "User's input error. Input string is empty!"
-                );
+                logger.debug("User's input error. Input string is empty!");
 
                 wasError = true;
                 continue;
@@ -187,26 +172,21 @@ public class InputController extends Controller {
             tempDataTime = in.nextLine();
 
             if (InputCheck.checkEmpty(tempDataTime)) {
-                logger.debug(
-                        "User's input error. Input string is empty!"
-                );
+                logger.debug("User's input error. Input string is empty!");
 
                 wasError = true;
-
             }
 
             try {
                 returnTime = LocalDateTime.parse(tempDataTime, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
             } catch (DateTimeParseException e) {
-                logger.debug(e);
+                logger.debug("Error formatting date and time",e);
                 wasError = true;
             }
 
             if (returnTime != null && returnTime.isBefore(LocalDateTime.now())) {
                 wasError = true;
-                logger.debug(
-                        "User's input error. LocalDateTime value is in the past!"
-                );
+                logger.debug("User's input error. LocalDateTime value is in the past!");
             }
 
             if (wasError) {

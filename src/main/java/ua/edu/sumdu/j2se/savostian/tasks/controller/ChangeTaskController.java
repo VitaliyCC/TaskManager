@@ -25,14 +25,14 @@ public class ChangeTaskController extends EditTaskController {
                 allTasksView.printAllTasksWithIndex(taskList);
                 view.printTaskSelection();
                 try {
-                    choiceTask(taskList, Integer.parseInt(in.nextLine()));
+                    choiceTask(taskList, InputController.nextIntInRange(0,taskList.size()));
                 } catch (CloneNotSupportedException e) {
-                    logger.error(e+"\n");
+                    logger.error("Cloning error ",e);
                     return ProgramStatus.MAINMENU;
                 }
 
             } else {
-                logger.error("Collection is empty " + taskList+"\n");
+                logger.error("Collection is empty " + taskList);
                 view.printSomeTitle("You do not have any tasks. You must create them to change the tasks.");
                 return ProgramStatus.MAINMENU;
             }
@@ -72,7 +72,7 @@ public class ChangeTaskController extends EditTaskController {
 
             return controller.process(taskList);
         } else {
-            logger.error("Program status is incorrect! status -"+status +"\n");
+            logger.error("Program status is incorrect! status -"+status);
             throw new IllegalStateException("Program status is incorrect!");
         }
 

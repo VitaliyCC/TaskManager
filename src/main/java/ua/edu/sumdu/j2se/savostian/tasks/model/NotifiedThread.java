@@ -46,6 +46,12 @@ public class NotifiedThread extends Thread {
      */
     @Override
     public void run() {
+        try {//120000ms=2min
+            sleep(120000);
+        } catch (InterruptedException e) {
+            logger.error("Thread interrupt error ",e);
+        }
+
         while (true) {
             SortedMap<LocalDateTime, Set<Task>> taskMap = Tasks.calendar(tasks, LocalDateTime.now(), LocalDateTime.now().plusMinutes(5));
 
@@ -61,7 +67,7 @@ public class NotifiedThread extends Thread {
             try {//300000ms=5min
                 sleep(300000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                logger.error("Thread interrupt error ",e);
             }
             logger.debug("Thread woke up and found no tasks for the near future " + threadName);
         }

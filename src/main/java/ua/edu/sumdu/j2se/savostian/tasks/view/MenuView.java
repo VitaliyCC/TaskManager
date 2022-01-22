@@ -15,20 +15,6 @@ public class MenuView extends TaskView {
 
     }
 
-    public void printAddMenu() {
-        printSeparator();
-        printSeparator();
-        printSomeTitle("You are in the add menu. Select one of the program functions: ");
-        printSomeTitle("1. Set task name");
-        printSomeTitle("2. Activate task");
-        printSomeTitle("3. Set time for repeated task");
-        printSomeTitle("4. Set time for non-repeated task");
-        printSomeTitle("5. Add and exit to main menu");
-        printSeparator();
-        System.out.print("Your choice - ");
-
-    }
-
     public void printChangeMenu() {
         printSeparator();
         printSeparator();

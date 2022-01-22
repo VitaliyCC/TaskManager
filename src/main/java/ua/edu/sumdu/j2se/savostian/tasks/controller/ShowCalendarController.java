@@ -72,6 +72,7 @@ public class ShowCalendarController extends Controller {
             logger.debug("Collection is empty " + taskMap);
 
         } else {
+            showCalendarView.printSeparator();
             showCalendarView.printSomeTitle("Your tasks from " + start + " to " + end + ":");
             showCalendarView.printCalendarTasks(taskMap);
             logger.debug("Display of tasks for a certain period of time from " + start + " to " + end + "|");

@@ -84,7 +84,6 @@ public class MainController extends Controller {
                 status = showAllTasksController.process(globalTasks);
 
             }
-
         }
         fileController.writeFileProcess(globalTasks);
     }

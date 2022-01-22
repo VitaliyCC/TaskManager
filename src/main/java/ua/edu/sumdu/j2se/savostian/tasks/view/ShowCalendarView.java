@@ -10,14 +10,14 @@ import java.util.SortedMap;
 public class ShowCalendarView extends TaskView {
     public void printChoiceStartTime() {
         printSeparator();
-        printSomeTitle("Enter the start date of the period");
+        printSomeTitle("Enter the start date of the period (YYYY-MM-DDTHH:MM for example - 2022-01-14T15:15)");
         System.out.print("-->");
 
     }
 
     public void printChoiceEndTime() {
         printSeparator();
-        printSomeTitle("Enter the end date of the period");
+        printSomeTitle("Enter the end date of the period (YYYY-MM-DDTHH:MM for example - 2022-01-14T15:15)");
         System.out.print("-->");
 
     }

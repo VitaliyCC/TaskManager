@@ -47,7 +47,7 @@ public class TaskView implements ConsoleView {
         }
 
         printTask.append('|');
-        printTask.append(Formatter.createFormatTitle(String.valueOf(task.getRepeatInterval() / 60000), 5));
+        printTask.append(Formatter.createFormatTitle(String.valueOf(task.getRepeatInterval() / 60), 5));
         printTask.append('|');
         printTask.append(Formatter.createFormatDate(task.getStartTime()));
         printTask.append('|');
